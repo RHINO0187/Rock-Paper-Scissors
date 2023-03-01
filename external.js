@@ -13,6 +13,9 @@ choiceButton.forEach(button => button.addEventListener("click", () => {
 
     player = button.textContent;
     compTurn();
+    playerText.textContent = `Player: ${player}`
+    computerText.textContent = `Computer: ${player}`
+    resultText.textContent = checkWin();
 }));
 
 // create function for computer choice
@@ -37,14 +40,6 @@ console.log(randNum)}
 
 compTurn();
 
-// create function to get player choice
-
-function playerTurn() {
-    const input = document.querySelector('user-data');
-    const data = input.value;
-    // use data here
-  }
-
 // tell program parameters for game
 
 function checkWin() {
@@ -62,4 +57,7 @@ function checkWin() {
     }
 }
 
+
+
 // loop back to beginningconsole.log ("Rock Paper Scissors");
+
