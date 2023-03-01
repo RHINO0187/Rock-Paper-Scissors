@@ -1,5 +1,7 @@
 console.log ("Rock Paper Scissors");
 
+let player; 
+
 // create function for computer choice
 
 function compTurn(){
@@ -24,8 +26,25 @@ compTurn();
 
 // create function to get player choice
 
-// tell program Rock > Scissors > Paper > Rock
+function playerTurn() {
+    
+}
 
-// declare winner and why
+// tell program parameters for game
+
+function checkWin() {
+    if (player == computer) {
+        return "Draw!";
+    }
+    else if(computer == "Rock"){
+        return (Player == "Paper") ? "You Win!" : "You Lose!"
+    }
+    else if(computer == "Paper"){
+        return (Player == "Scissors") ? "You Win!" : "You Lose!"
+    }
+    else if(computer == "Scissors"){
+        return (Player == "Rock") ? "You Win!" : "You Lose!"
+    }
+}
 
 // loop back to beginningconsole.log ("Rock Paper Scissors");
