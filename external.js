@@ -14,7 +14,7 @@ choiceButton.forEach(button => button.addEventListener("click", () => {
     player = button.textContent;
     compTurn();
     playerText.textContent = `Player: ${player}`
-    computerText.textContent = `Computer: ${player}`
+    computerText.textContent = `Computer: ${computer}`
     resultText.textContent = checkWin();
 }));
 
@@ -29,10 +29,10 @@ switch (randNum){
         computer = "Rock";
         break;
     case 2:
-        computer = "Scissors";
+        computer = "Paper";
         break;
     case 3:
-        computer = "Paper";
+        computer = "Scissors";
         break;
         
 }
@@ -47,13 +47,13 @@ function checkWin() {
         return "Draw!";
     }
     else if(computer == "Rock"){
-        return (Player == "Paper") ? "You Win!" : "You Lose!"
+        return (player == "Paper") ? "You Win!" : "You Lose!"
     }
     else if(computer == "Paper"){
-        return (Player == "Scissors") ? "You Win!" : "You Lose!"
+        return (player == "Scissors") ? "You Win!" : "You Lose!"
     }
     else if(computer == "Scissors"){
-        return (Player == "Rock") ? "You Win!" : "You Lose!"
+        return (player == "Rock") ? "You Win!" : "You Lose!"
     }
 }
 
