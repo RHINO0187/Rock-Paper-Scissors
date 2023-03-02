@@ -1,20 +1,20 @@
 console.log ("Rock Paper Scissors");
 
-const playerText = document.querySelector("#playerText")
-const computerText = document.querySelector("#computerText")
-const resultText = document.querySelector("#resultText")
-const choiceButton = document.querySelectorAll(".choiceButton")
+const playerText = document.querySelector("#playerText");
+const computerText = document.querySelector("#computerText");
+const resultText = document.querySelector("#resultText");
+const choiceButton = document.querySelectorAll(".choiceButton");
 
-let player; 
+let player;
 let computer;
 let result;
 
-choiceButton.forEach(button => button.addEventListener("click", () => {
+choiceButton.forEach(button=>button.addEventListener('click',()=>{
 
     player = button.textContent;
     compTurn();
-    playerText.textContent = `Player: ${player}`
-    computerText.textContent = `Computer: ${computer}`
+    playerText.textContent = `Player: ${player}`;
+    computerText.textContent = `Computer: ${computer}`;
     resultText.textContent = checkWin();
 }));
 
@@ -35,29 +35,23 @@ switch (randNum){
         computer = "Scissors";
         break;
         
-}
-console.log(randNum)}
-
-compTurn();
+}}
 
 // tell program parameters for game
 
-function checkWin() {
-    if (player == computer) {
+function checkWin(){
+    if(player == computer) {
         return "Draw!";
     }
     else if(computer == "Rock"){
-        return (player == "Paper") ? "You Win!" : "You Lose!"
+        return(player == "Paper") ? "You Win!" : "You Lose!"
     }
     else if(computer == "Paper"){
-        return (player == "Scissors") ? "You Win!" : "You Lose!"
+        return(player == "Scissors") ? "You Win!" : "You Lose!"
     }
     else if(computer == "Scissors"){
-        return (player == "Rock") ? "You Win!" : "You Lose!"
+        return(player == "Rock") ? "You Win!" : "You Lose!"
     }
 }
 
-
-
-// loop back to beginningconsole.log ("Rock Paper Scissors");
-
+// loop back to beginning ("Rock Paper Scissors");
