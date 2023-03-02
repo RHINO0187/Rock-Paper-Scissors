@@ -9,7 +9,7 @@ let player;
 let computer;
 let result;
 
-choiceButton.forEach(button=>button.addEventListener('click',()=>{
+choiceButton.forEach(button => button.addEventListener('click', () => {
 
     player = button.textContent;
     compTurn();
@@ -21,21 +21,21 @@ choiceButton.forEach(button=>button.addEventListener('click',()=>{
 // create function for computer choice
 
 function compTurn(){
-
-const randNum = Math.floor(Math.random() * 3) + 1;
-
-switch (randNum){
-    case 1:
+    
+    const randNum = Math.floor(Math.random() * 3) + 1;
+    
+    switch (randNum){
+        case 1:
         computer = "Rock";
         break;
-    case 2:
+        case 2:
         computer = "Paper";
         break;
-    case 3:
+        case 3:
         computer = "Scissors";
         break;
-        
-}}
+        }
+    }
 
 // tell program parameters for game
 
