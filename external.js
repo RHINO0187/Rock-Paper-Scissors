@@ -4,10 +4,14 @@ const playerText = document.querySelector("#playerText");
 const computerText = document.querySelector("#computerText");
 const resultText = document.querySelector("#resultText");
 const choiceButton = document.querySelectorAll(".choiceButton");
+const winText = document.querySelector("#winText");
+const lossText = document.querySelector("lossText");
 
 let player;
 let computer;
 let result;
+let winNum = 0;
+let lossNum = 0;
 
 choiceButton.forEach(button => button.addEventListener('click', () => {
 
@@ -55,3 +59,12 @@ function checkWin(){
 }
 
 // loop back to beginning ("Rock Paper Scissors");
+
+if (resultText = "You Win!") {
+    winNum++;
+    return;
+}
+else {
+    lossNum++;
+    return;
+}
