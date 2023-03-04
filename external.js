@@ -4,14 +4,14 @@ const playerText = document.querySelector("#playerText");
 const computerText = document.querySelector("#computerText");
 const resultText = document.querySelector("#resultText");
 const choiceButton = document.querySelectorAll(".choiceButton");
-const winText = document.querySelector("#winText");
-const lossText = document.querySelector("lossText");
+const winNum = document.querySelector("#winNum");
+const lossNum = document.querySelector("#lossNum");
 
 let player;
 let computer;
 let result;
-let winNum = 0;
-let lossNum = 0;
+let win = 1;
+let loss = 1;
 
 choiceButton.forEach(button => button.addEventListener('click', () => {
 
@@ -20,6 +20,9 @@ choiceButton.forEach(button => button.addEventListener('click', () => {
     playerText.textContent = `Player: ${player}`;
     computerText.textContent = `Computer: ${computer}`;
     resultText.textContent = checkWin();
+    winNum.textContent = winTally();
+    lossNum.textContent = lossTally();
+    //  need to figure out how to keep result, wins, and losses displayed
 }));
 
 // create function for computer choice
@@ -57,14 +60,26 @@ function checkWin(){
         return(player == "Rock") ? "You Win!" : "You Lose!"
     }
 }
-
-// loop back to beginning ("Rock Paper Scissors");
-
-if (resultText = "You Win!") {
-    winNum++;
-    return;
+    function winTally() {
+    if(computer == "Rock"){
+        return(player == "Paper") ? win++ : console.log()
+    }
+    else if(computer == "Paper"){
+        return(player == "Scissors") ? win++ : console.log()
+    }
+    else if(computer == "Scissors"){
+        return(player == "Rock") ? win++ : console.log()
+    }
 }
-else {
-    lossNum++;
-    return;
+    function lossTally() {
+    if(computer == "Paper"){
+        return(player == "Rock") ? loss++ : console.log()
+    }
+    else if(computer == "Scissors"){
+        return(player == "Paper") ? loss++ : console.log()
+    }
+    else if(computer == "Rock"){
+        return(player == "Scissors") ? loss++ : console.log()
+    }
 }
+// loop back to beginning ("Rock Paper Scissors")
