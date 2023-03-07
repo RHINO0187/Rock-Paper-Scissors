@@ -1,0 +1,14 @@
+.top {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.winLoss {
+    display:flex;
+    flex-direction: column;
+}
+
+.buttons {
+    display:flex;
+}
